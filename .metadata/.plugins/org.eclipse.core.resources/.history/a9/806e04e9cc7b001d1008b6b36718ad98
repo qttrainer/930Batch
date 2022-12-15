@@ -1,0 +1,25 @@
+package io;
+
+import java.io.FileInputStream;
+
+public class DirectoryLoction {
+	//E:\new_workspace\930batch\coreJavaLearning\pom.xml
+	
+	public static void main(String[] args) {
+		System.out.println(System.getProperty("user.dir"));
+		try
+		{
+		FileInputStream fis = new FileInputStream("E:\\new_workspace\\930batch\\coreJavaLearning\\src\\main\\resources\\input.txt");
+		while((fis.read())!=-1)
+		{
+			System.out.println((char)fis.read());
+		}
+		fis.close();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+
+}
